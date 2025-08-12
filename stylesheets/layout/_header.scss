@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.header-principal {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    
+    
+
+
+    a {
+        img {
+            width: 160px;
+            height: 22px;
+
+            @include breakpoint(tablet) {
+                width: 200px;
+                height: 26px;
+            }
+        }
+    }
+
+    nav {
+
+        position: relative;
+        font-size: 16px;
+        font-family: $secondary-font;
+
+         @include breakpoint(tablet) {
+            font-size: 24px
+         }
+
+        ul {
+            @include reset-list();
+            display: none; 
+
+            li {
+                
+               
+                a{
+                    text-decoration: none;
+                    color: $negro;
+
+                    @include breakpoint(desktop) {
+                        font-size: 18px;
+
+                        &:hover {
+                            color: $verde;
+                        }
+                    }
+                }
+
+            }
+
+            @include breakpoint(desktop) {
+                display: block;
+            }
+
+            @include breakpoint(desktop) {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                    }
+        }
+
+
+            .menu-hamburguesa {
+                width: 20px;
+                height: 20px;
+
+                 @include breakpoint(tablet) {
+                    width: 25px;
+                    height: 25px;
+                 }
+
+                 @include breakpoint(desktop) {
+                    display: none;
+                 }
+            }
+            
+            .check-hamburguesa{
+
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                opacity: 0;
+
+                @include breakpoint(desktop) {
+                        display: none;
+                    }
+
+                &:checked + ul{
+                    display: block;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 12px;
+                    position: absolute;
+                    right: 0;
+                    background-color: white;
+                    padding: 10px;
+                    padding-right: 50px;
+                    color: $negro;
+                    transition: all 0.3s;
+                    box-shadow: -6px 5px 12px -4px rgba(0,0,0,0.64);
+                    -webkit-box-shadow: -6px 5px 12px -4px rgba(0,0,0,0.64);
+                    -moz-box-shadow: -6px 5px 12px -4px rgba(0,0,0,0.64);
+
+                     @include breakpoint(tablet) {
+                        gap: 16px;
+                     }
+
+                    a:active {
+                        color: $verde;
+                    }
+
+                    
+
+                    
+
+                }
+                
+            }
+                
+            
+
+    }
+}

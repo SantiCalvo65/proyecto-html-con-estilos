@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as *;
+
+@mixin breakpoint($bp) {
+
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet){
+      @content;
+    }
+  }
+
+  @if $bp == tablet-horizontal {
+    @media (min-width: $bp-tablet-horizontal){
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop){
+      @content;
+    }
+  }
+
+  @if $bp == desktop-xl {
+    @media (min-width: $bp-desktop-xl){
+      @content;
+    }
+  }
+}
+
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button() {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: $gris;
+  text-underline-offset: 3px;
+  color: $gris;
+
+  &:hover {
+    color: $verde;
+    text-decoration-color: $verde;
+
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 18px;
+  }
+}
+
+@mixin button-blanco() {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 300;
+  color: $blanco;
+  text-decoration: none;
+
+  &:hover {
+    color: $verde;
+
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 18px;
+  }
+} 

@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+/*BP RESPONSIVE*/
+
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop:1200px;
+$bp-desktop-xl: 1440px;
+
+$primary-font: "Outfit", sans-serif;
+$secondary-font: "Urbanist", sans-serif;
+
+$negro: #0d1117;
+$gris: #6f6e6e;
+$azul: #3b82f6;
+$blanco: #f9fafb;
+$verde: #6ee7b7;
+
+$degrade: linear-gradient(232deg,rgba(59, 130, 246, 0.55) 0%, rgba(110, 231, 183, 1) 86%);

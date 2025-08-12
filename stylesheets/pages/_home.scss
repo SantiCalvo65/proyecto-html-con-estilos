@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.page {
+    margin: 0;
+    padding: 0;
+}

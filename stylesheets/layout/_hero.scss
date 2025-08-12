@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+
+    margin-bottom: 40px;
+    overflow: visible;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint(desktop) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+
+    .hero-title {
+
+    @include breakpoint(desktop) {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+        
+    h1 {
+        font-family: $primary-font;
+        font-size: 44px;
+        font-weight: 800;
+        margin: 0;
+
+         @include breakpoint(tablet) {
+            font-size: 50px;
+            margin-bottom: 20px;
+         }
+
+         @include breakpoint(desktop) {
+            font-size: 70px;
+            width: 70%;
+         }
+
+        span {
+            text-decoration: underline;
+            text-decoration-color: $verde;
+             text-underline-offset: 6px;
+        }
+    }
+
+    p {
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+
+         @include breakpoint(tablet) {
+            font-size: 18px;
+            margin-bottom: 20px;
+         }
+
+         @include breakpoint(desktop) {
+            font-size: 22px;
+         }
+
+        
+    }
+    }
+
+
+    img {
+        width: 100%;
+        height: auto;
+        
+        @include breakpoint(desktop) {
+            width: 50%;
+            
+        }
+
+    }
+}

@@ -1,0 +1,218 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.hero-qs {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 60px;
+    }
+
+    .h1 {
+        margin-bottom: 20px;
+
+        @include breakpoint(desktop) {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include breakpoint(desktop) {
+            text-align: start;
+        }
+}
+
+.nuestro-equipo {
+    text-align: center;
+
+    @include breakpoint(desktop) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+    .h2 {
+        @include breakpoint(tablet) {
+            margin-bottom: 60px;
+        }
+
+        @include breakpoint(desktop) {
+            display: block;
+        }
+    }
+
+    .equipo {
+        @include breakpoint(desktop) {
+            display: flex;
+            gap: 60px;
+        }
+    }
+
+    article {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+        -webkit-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+        -moz-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+
+        margin-bottom: 40px;
+        padding: 20px 10px;
+        border-radius: 5px;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 60px;
+            width: 100%;
+            height: 400px;
+        }
+
+        @include breakpoint(desktop) {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .h3 {
+            @include breakpoint(tablet) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .h4 {
+            @include breakpoint(tablet) {
+                margin-bottom: 40px;
+            }
+        }
+        
+
+
+        figure {
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 100px;
+
+                @include breakpoint(tablet) {
+                    width: 160px;
+                    height: 160px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+.num {
+    background: $degrade;
+    text-align: center;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    @include breakpoint(tablet) {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint(desktop) {
+        height: auto;
+    }
+
+    .h2 {
+        color: $blanco;
+        text-decoration: none;
+        font-size: 44px;
+
+        @include breakpoint(tablet) {
+            font-size: 56px;
+        }
+    }
+
+    p {
+        color: $blanco;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include breakpoint(tablet) {
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 30px;
+            font-weight: 600;
+
+            @include breakpoint(tablet) {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+.opiniones {
+
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint(desktop) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .h3 {
+        margin-bottom: 20px;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    }
+
+    img {
+        width: 100%;
+        box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+        -webkit-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+        -moz-box-shadow: -1px 0px 6px 0px rgba(0,0,0,0.41);
+
+        margin-bottom: 40px;
+        border-radius: 5px;
+
+        @include breakpoint(tablet) {
+            width: 80%;
+            height: 100%;
+            
+        }
+
+        @include breakpoint(desktop) {
+            width: 100%;
+            height: 500px;
+        }
+    }
+
+    .opinion-img {
+        @include breakpoint(desktop) {
+            display: flex;
+            gap: 60px;
+        }
+        
+    }
+
+    .opinion-titulo {
+        @include breakpoint(desktop) {
+            margin-bottom: 60px;
+        }
+    }
+}

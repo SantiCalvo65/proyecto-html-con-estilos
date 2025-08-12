@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+    background-color: $negro;
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+    padding-top: 40px;
+
+    p{
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-weight: 300;
+        color: $blanco;
+    }
+
+
+    img {
+        width: 145px;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 15px;
+
+        @include breakpoint(tablet) {
+            font-size: 18px;
+            margin-bottom: 20px
+        }
+    }
+
+    ul {
+        @include reset-list();
+
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+
+            @include breakpoint(tablet) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+
+
+}

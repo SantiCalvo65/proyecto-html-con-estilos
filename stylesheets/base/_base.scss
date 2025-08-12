@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.page {
+    .h1 {
+        font-family: $primary-font;
+        font-size: 44px;
+        font-weight: 800;
+        margin: 0;
+        text-decoration: underline;
+        text-decoration-color: $verde;
+        text-underline-offset: 6px;
+
+        font-size: 60px;
+    }
+
+    .h2 {
+         font-family: $primary-font;
+            font-size: 30px;
+            font-weight: 800;
+            margin: 0;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-decoration-color: $verde;
+            text-underline-offset: 4px;
+
+            @include breakpoint(tablet) {
+                font-size: 40px;
+            }
+    }
+
+    .h3 {
+        font-family: $primary-font;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 10px;
+
+        @include breakpoint(tablet) {
+            font-size: 30px;
+        }
+    }
+
+    .h4 {
+        font-family: $primary-font;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 10px;
+        color: $verde;
+
+        @include breakpoint(tablet) {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-family: $secondary-font;
+        line-height: 1.7;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 10px;
+        color: $gris;
+
+        @include breakpoint(tablet) {
+            font-size: 18px;
+        }
+    }
+}    

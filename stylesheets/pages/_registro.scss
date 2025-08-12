@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero-registro {
+    margin-bottom: 40px;
+}
+
+.cuerpo-registro {
+    margin-bottom: 40px;
+
+    .h1 {
+        text-align: center;
+    }
+
+    fieldset {
+        margin-bottom: 20px;
+        border: 2px solid $verde;
+
+        legend {
+            font-family: $primary-font;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+
+        input {
+            padding: 0;
+            margin-left: 15px;
+            border: none;
+            border-bottom: 2px solid $verde;
+        }
+
+        .photo {
+            margin: 0;
+            margin-top: 10px;
+            border: 0;
+        }
+
+        .biography {
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            @include breakpoint(tablet) {
+                gap: 45px;
+            }
+        }
+
+         button {
+        background-color: $gris;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        
+
+        a {
+            color: $blanco;
+            font-family: $secondary-font;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            
+
+            &:hover {
+                color: $verde;
+            }
+        }
+    }
+    }
+    
+}

@@ -1,0 +1,72 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero-blogs {
+
+    margin-bottom: 40px;
+
+    .h1 {
+        text-decoration: none;
+        margin-bottom: 20px;
+
+        @include breakpoint(desktop) {
+            margin-bottom: 60px;
+        }
+    }
+
+    figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+
+        @include breakpoint(desktop){
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        img {
+            width: 100%;
+
+            @include breakpoint(desktop){
+                width: 80%;
+                
+            }
+        }
+    }
+}
+
+.blogs-content {
+    margin-bottom: 40px;
+
+    @include breakpoint(desktop){
+        margin-bottom: 100px;
+    }
+
+
+    .h2 {
+        margin-bottom: 20px;
+
+        @include breakpoint(desktop){
+            margin-bottom: 60px;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    ol {
+        padding-left: 16px;
+        margin: 0;
+        li {
+            font-family: $secondary-font;
+            line-height: 1.7;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0;
+            margin-bottom: 10px;
+            color: $gris;
+        }
+    }
+}
