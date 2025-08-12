@@ -10,7 +10,7 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
-    "sass": "^1.89.2",
+    "sass": "^1.90.0",
     "vite": "^6.1.0"
   }
 }
